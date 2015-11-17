@@ -30,6 +30,15 @@
 <main id="content" role="main">
 
 
+<script>
+var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+for(var i = 0; i < hashParams.length; i++){
+    var p = hashParams[i].split('=');
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+}
+</script>
+
+
   
   <div>
   <a class="back-to-previous" href="evl-11">Back <span class="visuallyhidden"> to the previous question</span></a>
@@ -58,7 +67,7 @@
     <label class="form-label" for="vehicle-reg" style="font-size:120%;padding-top:0.75em">
     Vehicle registration (number plate)</label>
 
-    <input class="form-control" autocomplete="off" id="regmark" name="regmark" style="border:#ccc solid 2px;font-size:120%;width:280px;border-radius:4px;line-height:1.6;text-transform:uppercase" maxlength="8" type="text" required data-parsley-required-message="You must provide the vehicle registration"> 
+    <input class="form-control" autocomplete="off" id="regmark" name="regmark" style="border:#6f777b solid 2px;font-size:120%;width:280px;border-radius:1px;line-height:1.6;text-transform:uppercase" maxlength="8" type="text" required data-parsley-required-message="You must provide the vehicle registration"> 
 
 
   <br clear="all">
