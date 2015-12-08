@@ -11,6 +11,9 @@
 
     <script type="text/javascript" src="/public/javascripts/common.js"></script>
 
+    <script type="text/javascript" src="/public/javascripts/parsley.min.js"></script>
+
+
 
 
 
@@ -39,7 +42,7 @@
   <br clear="all">
 
 
-  <form action="evl-3-flow" method="get" class="form">
+  <form action="evl-3-flow" method="get" class="form" data-parsley-validate>
   <input type="hidden" name="nextlink" value="sorn-vehicle-details">
   <input type="hidden" name="nextbacklink" value="evl-3-v5c">
 
@@ -55,7 +58,7 @@
 
     <label class="form-label" for="v11" style="font-size:120%;padding:0.75em 0 0.25em 0">
     Using the 16 digit reference number from your V11 reminder</label>
-    <input class="form-control" type="text" id="v11" autocomplete="off" style="border:#6f777b solid 2px;font-size:120%;width:280px;border-radius:1px;line-height:1.6;margin-bottom:2em" size="16" >
+    <input class="form-control" type="text" id="v11" autocomplete="off" style="border:#6f777b solid 2px;font-size:120%;width:280px;border-radius:1px;line-height:1.6;margin-bottom:2em" size="16" required  data-parsley-required-message="Please supply a V11 reference number, or click the link<br>below to use your V5C (log book) instead">
 
     <br clear="all">
 
